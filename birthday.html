@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>生日祝福</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #1a1a2e; /* 深紫背景模拟星空 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* 蛋糕样式 */
+        .cake {
+            position: relative;
+            margin-top: 50px;
+        }
+        .cake-bottom {
+            width: 200px;
+            height: 60px;
+            background: #8b4513; /* 深棕 */
+            border-radius: 10px 10px 0 0;
+        }
+        .cake-middle {
+            width: 180px;
+            height: 50px;
+            background: #cd853f; /* 浅棕 */
+            margin: 0 auto;
+        }
+        .cake-top {
+            width: 160px;
+            height: 40px;
+            background: #ffb6c1; /* 粉色 */
+            margin: 0 auto;
+            border-radius: 0 0 10px 10px;
+        }
+        /* 蜡烛样式 */
+        .candle {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 30px;
+            background: #f8f9fa; /* 蜡烛杆 */
+        }
+        .candle-top {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 10px;
+            background: #ffd700; /* 金属圈 */
+        }
+        .flame {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 20px;
+            background: orange;
+            border-radius: 50% 50% 0 0;
+            animation: flame 1s infinite alternate;
+        }
+        @keyframes flame {
+            0% {
+                height: 20px;
+                opacity: 0.8;
+            }
+            100% {
+                height: 25px;
+                opacity: 1;
+            }
+        }
+        /* 文字动画 */
+        .text {
+            color: white;
+            font-family: "Microsoft YaHei";
+            font-size: 20px;
+            margin-top: 30px;
+            opacity: 0;
+            animation: showText 3s forwards;
+            animation-delay: 1s;
+        }
+        @keyframes showText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cake">
+        <div class="cake-bottom"></div>
+        <div class="cake-middle"></div>
+        <div class="cake-top"></div>
+        <div class="candle">
+            <div class="candle-top"></div>
+            <div class="flame"></div>
+        </div>
+    </div>
+    <div class="text">祝徐艳丽生日快乐！愿你每天都闪闪发光～</div>
+</body>
+</html>
